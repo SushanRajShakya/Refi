@@ -1,0 +1,6 @@
+# Ignore the eslint for design kit components
+src/components/designs/*
+
+# Ignore test files
+*.test.js
+*.spec.js

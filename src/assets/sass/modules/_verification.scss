@@ -1,0 +1,44 @@
+.block-verification {
+  @include e(content) {
+    margin-top: 120px;
+    @include mqmax(md) {
+      margin-top: 40px;
+    }
+  }
+  @include mqmax(md) {
+    margin-bottom: 40px;
+  }
+  .form-sm {
+    width: 410px;
+    margin: 0 auto;
+    text-align: left;
+    min-height: 350px;
+    @include mqmax(md) {
+      width: auto;
+      min-height: auto;
+    }
+    .form-group-sm {
+      width: 445px;
+      margin: 0 auto 20px;
+      
+      @include mqmax(md) {
+        width: auto;
+      }
+    }
+    .form-group-dob {
+      .form-group__control {
+        @include mqmax(sm) {
+          width: 70%;
+        }
+      }
+    }
+  }
+  h2 {
+    padding: 60px 0;
+    font-size: 32px;
+    font-weight: bold;
+    @include mqmax(md) {
+      padding: 0 0 60px;
+    }
+  }
+}

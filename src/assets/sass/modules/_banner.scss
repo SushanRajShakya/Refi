@@ -1,0 +1,52 @@
+.banner {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  position: relative;
+  border-bottom: 40px solid $dark-blue;
+  @include e(content) {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 95%;
+    color: $white;
+    font-size: 46px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 4px $black;
+    font-family: Rift-Regular;
+    @include mqmax(md) {
+      bottom: 30px;
+    }
+    span {
+      display: block;
+      font-size: 44px;
+      font-weight: bold;
+      color: getColor('warning.base');
+      @include mqmax(md) {
+      font-size: 24px;
+      }
+    }
+    @include mqmax(md) {
+    font-size: 26px;
+    left: 20px;
+    }
+  }
+  @include m(bg1) {
+    background-image: url(../images/banner.jpg);
+  }
+  @include m(bg2) {
+    background-image: url(../images/car2.jpg);
+  }
+  @include m(bg3) {
+    background-image: url(../images/car3.jpg);
+  }
+  @include m(bg4) {
+    background-image: url(../images/car4.jpg);
+  }
+  @include mqmax(md) {
+    height: 200px;
+    border-bottom: 20px solid $dark-blue;
+  }
+}

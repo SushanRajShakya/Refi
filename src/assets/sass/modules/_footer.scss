@@ -1,0 +1,68 @@
+.footer {
+  padding: 20px 60px;
+  background: $light-grey;
+  border-top: 40px solid $dark-blue;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Rift-Regular;
+  font-size: 20px;
+  @include mqmax(md) {
+    border-top: 20px solid $dark-blue;
+  }
+  .col-md-4 {
+    @include mqmax(md) {
+      margin-bottom: 10px;
+    }
+  }
+  a {
+    color: $white;
+    &:hover {
+      cursor: pointer;
+      color: lighten($warning-color, 15%);
+    }
+  }
+  .footer-icons {
+    display: block;
+    list-style: none;
+    margin: 0 0 10px;
+    li {
+      display: inline;
+      margin-right: 5px;
+      .icon {
+        display: inline-flex;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        color: $light-grey;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: $white;
+        transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        i {
+          font-size: 20px;
+          color: $light-grey;
+        }
+        img {
+          width: 16px;
+          color: $light-grey;
+        }
+        &:hover {
+          background: lighten($warning-color, 15%);
+          transition: 0.5s;
+          -moz-transition: 0.5s;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    display: block;
+    font-size: 20px;
+  }
+}

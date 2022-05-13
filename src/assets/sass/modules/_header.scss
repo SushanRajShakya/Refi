@@ -1,0 +1,48 @@
+.header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  @include mqmax(md) {
+    flex-direction: column;
+  }
+  @include e(brand) {
+    @include mqmax(md) {
+      display: block;
+    }
+    a {
+      padding-left: 0;
+      display: block;
+      img {
+        height: 62px;
+      }
+    }
+  }
+  @include e(slogan) {
+    display: block;
+    margin-top: -14px;
+    @include e(text) {
+      padding-left: 60px;
+      font-size: 15px;
+      font-family: ChaparralPro-Regular;
+      color: $black;
+    }
+  }
+  @include e(right) {
+    margin-left: auto;
+    @include mqmax(md) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    span {
+      font-size: 22px;
+      color: $primary-color;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: Rift-Regular;
+    }
+  }
+}
+.userprofile {
+  padding: 10px 20px;
+  text-align: right;
+}

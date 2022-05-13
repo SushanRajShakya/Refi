@@ -1,0 +1,229 @@
+.steps {
+  padding: 60px 20px;
+  h2 {
+    font-weight: normal;
+    text-align: center;
+  }
+  @include e(column) {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 66px;
+  }
+}
+.block-round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 232px;
+  height: 232px;
+  font-size: 68px;
+  background: lighten($base-grey, 65%);
+  font-weight: bold;
+  color: #050505;
+}
+.content-narrow {
+  padding: 0 160px;
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    @include mqmax(md) {
+      font-size: 18px;
+    }
+  }
+  @include mqmax(md) {
+    padding: 40px 30px 0 !important;
+    word-break: break-word;
+  }
+}
+.content-xs {
+  width: 70%;
+  margin: 0 auto;
+  @include mqmax(md) {
+    width: 90%;
+  }
+}
+.col-block {
+  .gray-block {
+    width: 320px;
+    height: 320px;
+    background: lighten($base-grey, 65%);
+  }
+}
+
+.bg-primary {
+  background: $white;
+  color: $primary-color;
+}
+.content-primary-color {
+  color: $primary-color;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-logo {
+  li {
+    display: inline-block;
+    margin-right: 70px;
+    @include mqmax(md) {
+      margin-right: 0;
+      margin-bottom: 10px;
+      display: block;
+    }
+    a {
+      display: inline-block;
+      img {
+        height: 70px;
+        width: auto;
+      }
+    }
+    span {
+      display: inline-block;
+      img {
+        height: 70px;
+        padding: 15px 0px;
+        width: auto;
+      }
+    }
+  }
+}
+.form-block {
+  @include e(content) {
+    border: 2px solid $white;
+    padding: 20px 20px 0;
+    margin-bottom: 20px;
+    margin-left: -20px;
+    border-radius: 10px;
+  }
+}
+
+.block-employer {
+  &:hover {
+    border: 2px solid getColor('primary.dark');
+  }
+}
+.block-testimonial {
+  padding: 60px 0;
+  position: relative;
+  background: url(../images/block-background.jpg) no-repeat left center;
+  background-size: cover;
+  border-top: 40px solid $dark-blue;
+  @include e(content) {
+    position: relative;
+    font-size: 30px;
+    color: $black;
+    font-style: italic;
+    @include mqmax(md) {
+      font-size: 20px;
+      padding: 10px !important;
+    }
+    @include e(name) {
+      display: block;
+      text-align: right;
+      font-style: italic;
+    }
+  }
+  @include mqmax(md) {
+    padding: 10px 0;
+    margin-top: 40px !important;
+    border-top: 20px solid $dark-blue;
+  }
+}
+.white-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba($white, 0.8);
+}
+
+.block-button {
+  .form-group {
+    margin-top: 68px;
+    @include mqmax(md) {
+      margin-top: 18px;
+    }
+  }
+}
+.block-vehicle {
+  border: solid 2px getColor('primary.dark');
+  padding: 15px 5px 0px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  .divider {
+    position: relative;
+    hr {
+      margin: 5px 0px 15px;
+    }
+    @include e(text) {
+      position: absolute;
+      padding: 0px 5px;
+      position: absolute;
+      bottom: 6px;
+      left: 48%;
+      width: max-content;
+      background: white;
+    }
+  }
+}
+.single-word {
+  white-space: pre;
+}
+
+.block-amazon {
+  height: 265px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px;
+  padding-bottom: 2px;
+  max-width: 393px;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-image: url(../images/amazon_gift_card.png);
+  background-position: left center;
+  background-size: cover;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(94, 94, 94, 0.8);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(94, 94, 94, 0.8);
+  box-shadow: 0px 0px 5px 1px rgba(94, 94, 94, 0.8);
+  font-family: inherit;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  span {
+    display: block;
+    text-shadow: 0px 1px 2px $black;
+    color: $black;
+    font-weight: 600;
+  }
+
+  button {
+    font-family: inherit;
+    margin: 13px auto;
+    font-size: 14px;
+    max-height: 35px;
+    max-width: 90px;
+    font-weight: bold;
+  }
+
+  .amazon-disclaimer {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: none;
+    text-shadow: none;
+  }
+}
+.block-confirmation {
+  .pt-68 {
+    @include mqmax(md) {
+      padding-top: 0 !important;
+    }
+  }
+}

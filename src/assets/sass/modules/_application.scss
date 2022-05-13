@@ -1,0 +1,28 @@
+
+.block-application {
+  padding: 0 80px;
+  @include mqmax(md) {
+    padding: 0 20px;
+  }
+  h2 {
+    padding: 60px 0;
+    font-size: 32px;
+    font-weight: bold;
+    @include mqmax(md) {
+      padding: 40px 0;
+      font-size: 22px;
+    }
+  }
+  h3 {
+    padding-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    @include mqmax(md) {
+      padding-bottom: 0;
+      font-size: 18px;
+    }
+  }
+  label {
+    font-weight: normal;
+  }
+}

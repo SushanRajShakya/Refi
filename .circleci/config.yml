@@ -1,0 +1,40 @@
+jobs:
+  aws_s3_deploy:
+    docker:
+      - image: fhfdevops/envault:v0.1.0-node10.16.0-stretch-slim
+    steps:
+      - checkout
+
+      - run:
+          name: Setup dynamic variable for S3 Bucket name according to the branch
+          command: |
+            if [ $CIRCLE_BRANCH == "dev" ]
+            then
+              echo 'export S3BUCKET=net.fhfrefi.dev' >> ~/.bashrc
+              echo 'export STAGE=dev' >> ~/.bashrc
+            elif [ $CIRCLE_BRANCH == "master" ]
+            then
+              echo 'export S3BUCKET=com.fhfrefi.prod' >> ~/.bashrc
+              echo 'export STAGE=prod' >> ~/.bashrc  
+            else
+              echo "Undefined S3bucket"
+            fi
+            echo 'export CI=false' >> ~/.bashrc
+      - run:
+          name: Deploy Application
+          command: |
+            source ~/.bashrc;
+            yarn install --pure-lockfile;
+            yarn test;
+            envault run -secret=$STAGE/fhf-refi 'yarn build';
+            aws s3 sync build s3://$S3BUCKET --delete;
+workflows:
+  version: 2
+  deploy_app:
+    jobs:
+      - aws_s3_deploy:
+          filters:
+            branches:
+              only:
+                - dev
+                - master

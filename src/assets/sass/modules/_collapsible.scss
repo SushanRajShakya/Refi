@@ -1,0 +1,54 @@
+.Collapsible {
+    @include mqmax(md) {
+        margin-bottom: 20px;
+    }
+    @include e(trigger) {
+        pointer-events: none;
+        position: relative;
+        @include mqmax(md) {
+            padding: 10px;
+            background-color: #f2f6fb;
+            border: 1px solid #e1ebf8;
+            border-bottom: 0;
+            pointer-events: visible;
+            cursor: pointer;
+            &.is-open {
+                &:after {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    font-family: FontAwesome;
+                    font-size: 20px;
+                    display: inline-block;
+                    padding-right: 6px;
+                    vertical-align: middle;
+                    content: "\f106";
+                }
+            }
+            &.is-closed {
+                &:after {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    font-family: FontAwesome;
+                    font-size: 20px;
+                    display: inline-block;
+                    padding-right: 6px;
+                    vertical-align: middle;
+                    content: "\f107";
+                }
+            }
+        }
+    }
+    @include e(contentOuter) {
+        @include mq(lg) {
+            height: auto !important;
+        }
+        @include mqmax(md) {
+            border: 1px solid #e1ebf8;
+            .form-block__content {
+                margin-left: 0;
+            }
+        }
+    }
+}

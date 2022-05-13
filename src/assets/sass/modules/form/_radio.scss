@@ -1,0 +1,176 @@
+[type='radio']:checked,
+[type='radio']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type='radio']:checked + label,
+[type='radio']:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+
+[type='radio']:checked + label:before,
+[type='radio']:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $base-grey;
+  border-radius: 100%;
+  background: #fff;
+}
+
+[type='radio']:checked + label:after,
+[type='radio']:not(:checked) + label:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: lighten($warning-color, 15%);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 100%;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+[type='radio']:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type='radio']:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+[type='radio']:checked + label:before {
+  border: 1px solid $warning-color;
+}
+
+[type='radio']:not(:checked) + label {
+  color: $lightest-grey;
+}
+
+[type='radio']:checked + label {
+  color: $black;
+}
+
+.radio-square {
+  [type='radio']:not(:checked) + label {
+    padding: 0 !important;
+    display: block !important;
+    // border: 1px solid $base-grey;
+    border-radius: 5px;
+    // background-color: $white;
+    &::before {
+      width: 30px;
+      height: 30px;
+      top: 30% !important;
+      left: 1% !important;
+      border: 2px solid lighten($lighter-grey, 15%);
+      border-radius: 5px;
+      background: $white;
+    }
+    &::after {
+      top: 6px !important;
+      left: 6px !important;
+    }
+  }
+  [type='radio']:checked + label {
+    padding: 0 !important;
+    display: block !important;
+    // border: 1px solid $warning-color;
+    border-radius: 5px;
+    // background-color: $white;
+    &::before {
+      width: 30px;
+      height: 30px;
+      top: 30% !important;
+      left: 1% !important;
+      border-radius: 5px;
+      border-width: 2px;
+      background: lighten($warning-color, 15%);
+    }
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 2px !important;
+      left: 11px !important;
+      width: 10px;
+      height: 20px;
+      border: solid $primary-color;
+      border-width: 0 2px 2px 0;
+      border-radius: 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
+    }
+  }
+}
+.radio-square-primary {
+  [type='radio']:not(:checked) + label {
+    padding: 15px 20px 15px 40px !important;
+    display: block !important;
+    //border: 1px solid $base-grey;
+    border-radius: 5px;
+    //background-color: $white;
+    &::before {
+      width: 32px;
+      height: 32px;
+      top: 30% !important;
+      left: 1% !important;
+      border: 2px solid $primary-color;
+      border-radius: 5px;
+    }
+    &::after {
+      top: 32% !important;
+      left: 1.5% !important;
+    }
+  }
+  [type='radio']:checked + label {
+    padding: 15px 20px 15px 40px !important;
+    display: block !important;
+    //border: 1px solid $warning-color;
+    border-radius: 5px;
+    //background-color: lighten($warning-color, 50%);
+    &::before {
+      width: 32px;
+      height: 32px;
+      top: 30% !important;
+      left: 1% !important;
+      border-radius: 5px;
+      border-width: 2px;
+      background: lighten($warning-color, 15%);
+    }
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 12px !important;
+      left: 12px !important;
+      width: 10px;
+      height: 20px;
+      border: solid $primary-color;
+      border-width: 0 2px 2px 0;
+      border-radius: 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.1s ease-in;
+      transition: all 0.1s ease-in;
+    }
+  }
+}

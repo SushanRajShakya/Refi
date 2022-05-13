@@ -1,0 +1,98 @@
+// ==========================================================================
+// Shame
+// If any code was written hastily to meet deadlines or in a hackish way then those
+// codes should be written in _shame.scss. Documentation of hack codes is encouraged.
+// Cleaning up the code in _shame.scss should be done at spare time. Find out whose code it is by
+// using: $ git blame _shame.scss
+// ==========================================================================
+
+// $color: getColor('grey.light');
+
+// @error $light-grey;
+
+.color-grey {
+    width: 200px;
+    height: 52px;
+    @include m(base){
+        background-color: $base-grey;
+    }
+    @include m(lighter){
+        background-color: $lighter-grey;
+    }
+    @include m(light){
+        background-color: $light-grey;
+    }
+    @include m(lightest){
+        background-color: $lightest-grey;
+    }
+}
+
+
+.color-blue {
+    width: 200px;
+    height: 52px;
+    @include m(base){
+        background-color: getColor('primary.base');
+    }
+    @include m(dark){
+        background-color: getColor('primary.dark');
+    }
+    @include m(light){
+        background-color: getColor('primary.light');
+    }
+}
+.color-red {
+    width: 200px;
+    height: 52px;
+    @include m(base){
+        background-color: getColor('error.base');
+    }
+    @include m(dark){
+        background-color: getColor('error.dark');
+    }
+    @include m(light){
+        background-color: getColor('error.light');
+    }
+}
+
+.color-warning {
+    width: 200px;
+    height: 52px;
+    @include m(base){
+        background-color: getColor('warning.base');
+    }
+    @include m(dark){
+        background-color: getColor('warning.dark');
+    }
+    @include m(light){
+        background-color: getColor('warning.light');
+    }
+}
+
+.color-warning-alt {
+    width: 200px;
+    height: 52px;
+    @include m(base){
+        background-color: getColor('warning-alt.base');
+    }
+    @include m(dark){
+        background-color: getColor('warning-alt.dark');
+    }
+    @include m(light){
+        background-color: getColor('warning-alt.light');
+    }
+}
+
+.color-secondary {
+    width: 200px;
+    height: 52px;
+    @include m(base){
+        background-color: getColor('secondary.base');
+    }
+    @include m(dark){
+        background-color: getColor('secondary.dark');
+    }
+    @include m(light){
+        background-color: getColor('secondary.light');
+    }
+}

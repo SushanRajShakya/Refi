@@ -1,0 +1,84 @@
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  @include mqmax(md) {
+    margin-bottom: 10px;
+  }
+  .form-group-wrap {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    input {
+      margin-right: 10px;
+      flex: 1;
+    }
+    span {
+      font-size: 16px;
+      padding-right: 10px;
+      font-weight: bold;
+    }
+  }
+  @include e(label) {
+    font-size: 16px;
+    font-weight: bold;
+    color: getColor('grey.body');
+    margin-bottom: 5px;
+    @include m(block) {
+      display: block;
+    }
+    @include m(text-lg) {
+      font-size: 30px;
+      font-weight: normal;
+      @include mqmax(md) {
+        font-size: 20px;
+      }
+    }
+    @include m(nomargin) {
+      margin-bottom: 0px;
+    }
+  }
+  @include e(control) {
+    //height: 48px;
+    border: 2px solid $lightest-grey;
+    border-radius: 0;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px !important;
+    line-height: normal;
+    background-color: $white;
+    color: getColor('grey.body');
+    font-family: $font-primary;
+    -webkit-appearance: none;
+    &:focus {
+      outline: none;
+      border: 2px solid lighten($primary-color, 5%);
+    }
+    &::placeholder {
+      font-size: 16px;
+      color: lighten($base-grey, 50%);
+    }
+  }
+  &.has-error {
+    .form-group__label {
+      color: $error-color;
+    }
+    .form-group__control {
+      border: 2px solid $error-color !important;
+    }
+    span {
+      color: $error-color;
+    }
+  }
+  .help {
+    display: block;
+    color: $lightest-grey;
+    font-size: 12px;
+  }
+}
+.bg-primary {
+  .form-group {
+    @include e(label) {
+      color: getColor('grey.body');
+    }
+  }
+}

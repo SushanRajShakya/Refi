@@ -1,0 +1,27 @@
+export const httpConstants = {
+  requestMethods: {
+    POST: 'post',
+    GET: 'get',
+    DELETE: 'delete',
+    PUT: 'put',
+  },
+  responseTypes: {
+    continue: 'Continue',
+    ok: 'OK',
+    accepted: 'Accepted',
+    noContent: 'No Content',
+    notModified: 'Not Modified',
+    permanentRedirect: 'Permanent Redirect',
+    badRequest: 'Bad Request',
+    unauthorized: 'Unauthorized',
+    notFound: 'Not Found',
+    methodNotAllowed: 'Method Not Allowed',
+    requestTimeout: 'Request Timeout',
+    conflict: 'Conflict',
+    internalServerError: 'Internal Server Error',
+    notImplemented: 'Not Implemented',
+    badGateway: 'Bad Gateway',
+    serviceUnavailable: 'Service Unavailable',
+  },
+  DEFAULT_LIMIT: '?limit=25',
+};

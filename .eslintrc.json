@@ -1,0 +1,25 @@
+{
+  "extends": ["eslint-config-leapfrog/react"],
+  "parser": "babel-eslint",
+  "rules": {
+    "require-jsdoc": 0,
+    "camelcase": 0,
+    "prop-types": 0,
+    "react/prop-types": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}

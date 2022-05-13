@@ -1,0 +1,32 @@
+.block-offer {
+  h2 {
+    font-family: Rift-Regular;
+    font-size: 46px;
+    padding: 40px 0px;
+    @include mqmax(md) {
+      font-size: 36px;
+    }
+  }
+  ul {
+    width: auto;
+    max-width: 100%;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    li:first-child {
+      font-family: Rift-Regular;
+      font-size: 34px !important;
+      font-weight: bold;
+      list-style-type: none;
+      line-height: 40px;
+      @include mqmax(md) {
+        font-size: 26px !important;
+      }
+    }
+    li {
+      text-align: left;
+      list-style-type: disc;
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}
